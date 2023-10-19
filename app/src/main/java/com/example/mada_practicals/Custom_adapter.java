@@ -40,10 +40,10 @@ public class Custom_adapter extends BaseAdapter {
     @Override
     public View getView(int i, View view, ViewGroup viewGroup) {
         view = lf.inflate(R.layout.activity_item2, null);
-        ImageView myimage = view.findViewById(R.id.flag_img);
-        TextView mytext = view.findViewById(R.id.country_txt);
-        myimage.setImageResource(flag[i]);
-        mytext.setText(country[i]);
+        ImageView img = view.findViewById(R.id.flag_img);
+        TextView txt = view.findViewById(R.id.country_txt);
+        img.setImageResource(flag[i]);
+        txt.setText(country[i]);
 
         return view;
     }
