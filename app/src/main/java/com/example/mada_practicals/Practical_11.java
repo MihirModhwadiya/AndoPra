@@ -29,9 +29,8 @@ public class Practical_11 extends AppCompatActivity implements AdapterView.OnIte
 
         Custom_adapter ad = new Custom_adapter(lst, flag, this);
 
-//        ArrayAdapter<String> ad = new ArrayAdapter<>(this, R.layout.activity_item, R.id.title, lst);
+//        ArrayAdapter<String> ad = new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, lst);
 //        ad.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-
 
         spinner.setAdapter(ad);
         spinner.setOnItemSelectedListener(this);

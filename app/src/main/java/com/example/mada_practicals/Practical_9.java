@@ -5,16 +5,16 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.widget.TextView;
-import android.widget.Toast;
 
-public class Practical_5_1_LinearLayout extends AppCompatActivity {
+public class Practical_9 extends AppCompatActivity {
+
     TextView view;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_practical51_linear_layout);
-        
+        setContentView(R.layout.activity_practical9);
+
         Intent intent = getIntent();
         String a = intent.getStringExtra("username");
         String b = intent.getStringExtra("password");
