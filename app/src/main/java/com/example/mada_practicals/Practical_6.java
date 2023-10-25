@@ -4,6 +4,8 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.util.Patterns;
 import android.view.View;
 import android.widget.Button;
@@ -23,6 +25,7 @@ public class Practical_6 extends AppCompatActivity {
     RadioButton selectedRadioButton;
 
     DatePicker date;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -41,71 +44,41 @@ public class Practical_6 extends AppCompatActivity {
         submit.setEnabled(false);
         radio = findViewById(R.id.radioGroup);
 
-
-
         date = findViewById(R.id.edit_date);
 
-        username.setOnFocusChangeListener(new View.OnFocusChangeListener() {
+        TextWatcher tw = new TextWatcher() {
             @Override
-            public void onFocusChange(View view, boolean b) {
-                validate();
+            public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
             }
-        });
 
-        email.setOnFocusChangeListener(new View.OnFocusChangeListener() {
             @Override
-            public void onFocusChange(View view, boolean b) {
-                validate();
+            public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
             }
-        });
 
-        password.setOnFocusChangeListener(new View.OnFocusChangeListener() {
             @Override
-            public void onFocusChange(View view, boolean b) {
+            public void afterTextChanged(Editable editable) {
                 validate();
             }
-        });
+        };
 
-        phone_number.setOnFocusChangeListener(new View.OnFocusChangeListener() {
-            @Override
-            public void onFocusChange(View view, boolean b) {
-                validate();
-            }
-        });
-        radio.setOnClickListener(new View.OnClickListener() {
+        View.OnClickListener clk = new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 validate();
             }
-        });
+        };
 
-        cricket.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                validate();
-            }
-        });
+        email.addTextChangedListener(tw);
+        password.addTextChangedListener(tw);
+        phone_number.addTextChangedListener(tw);
 
-        football.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                validate();
-            }
-        });
+        radio.setOnClickListener(clk);
 
-        hockey.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                validate();
-            }
-        });
+        cricket.setOnClickListener(clk);
 
-        submit.setOnFocusChangeListener(new View.OnFocusChangeListener() {
-            @Override
-            public void onFocusChange(View view, boolean b) {
-                validate();
-            }
-        });
+        football.setOnClickListener(clk);
+
+        hockey.setOnClickListener(clk);
     }
 
     public void validate() {
@@ -113,12 +86,12 @@ public class Practical_6 extends AppCompatActivity {
         boolean ispasswordValid = !(password.getText().toString().isEmpty());
         boolean isEmailValid = Patterns.EMAIL_ADDRESS.matcher(email.getText().toString()).matches();
         boolean isPhoneNumberValid = phone_number.getText().toString().length() == 10;
-
+        boolean isChecked = hockey.isChecked() || football.isChecked() || cricket.isChecked();
         radio = findViewById(R.id.radioGroup);
         int selectedRadioButtonId = radio.getCheckedRadioButtonId();
         selectedRadioButton = findViewById(selectedRadioButtonId);
         if (selectedRadioButton != null) {
-            submit.setEnabled(isEmailValid && isPhoneNumberValid && isusernameValid && ispasswordValid);
+            submit.setEnabled(isEmailValid && isPhoneNumberValid && isusernameValid && ispasswordValid && isChecked);
         }
     }
 
@@ -131,5 +104,4 @@ public class Practical_6 extends AppCompatActivity {
         intentt.putExtra("radio", selectedRadioButton.getText().toString());
         startActivity(intentt);
     }
-
 }

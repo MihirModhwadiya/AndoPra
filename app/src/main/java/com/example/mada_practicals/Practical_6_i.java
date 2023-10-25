@@ -25,8 +25,5 @@ public class Practical_6_i extends AppCompatActivity {
         phone_number = intentt.getStringExtra("number");
         radio = intentt.getStringExtra("radio");
 
-        disp.setText(String.format("%s\n%s\n%s\n%s\n%s", username, email, password, phone_number,radio));
-
-
     }
 }

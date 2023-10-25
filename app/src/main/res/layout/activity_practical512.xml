@@ -16,8 +16,8 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1.7"
-            android:text="Username :"
+            android:layout_weight="1.5"
+            android:text="Username:"
             android:textSize="30sp" />
 
         <EditText
@@ -36,8 +36,8 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1.7"
-            android:text="Password :"
+            android:layout_weight="1.5"
+            android:text="Password:"
             android:textSize="30sp" />
 
         <EditText
