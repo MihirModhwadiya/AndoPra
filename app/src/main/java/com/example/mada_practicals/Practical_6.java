@@ -19,7 +19,6 @@ public class Practical_6 extends AppCompatActivity {
 
     EditText username, email, password, phone_number;
     RadioGroup radio;
-    RadioButton radio1, radio2;
     CheckBox cricket, football, hockey;
     Button submit;
     RadioButton selectedRadioButton;

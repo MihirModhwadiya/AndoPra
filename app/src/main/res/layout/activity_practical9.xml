@@ -6,22 +6,49 @@
     android:layout_height="match_parent"
     tools:context=".Practical_9">
 
-    <TextView
-        android:id="@+id/username"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
-        android:gravity="center_horizontal"
-        android:text="hi"
-        android:textSize="30sp" />
 
     <TextView
-        android:id="@+id/password"
+        android:layout_marginTop="100dp"
+        android:id="@+id/txt_username"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Username:"
+        android:textSize="30sp" />
+
+    <EditText
+        android:layout_marginTop="100dp"
+        android:id="@+id/edit_username"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/username"
-        android:gravity="center_horizontal"
-        android:text="hi"
-        android:textSize="30sp"/>
+        android:layout_toRightOf="@+id/txt_username" />
+
+    <TextView
+        android:id="@+id/txt_pass"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txt_username"
+        android:text="Password:"
+        android:textSize="30sp" />
+
+    <EditText
+        android:id="@+id/edit_password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:inputType="textPassword"
+        android:layout_toRightOf="@+id/txt_pass"
+        android:layout_below="@+id/edit_username"/>
+
+    <Button
+        android:id="@+id/login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/edit_password"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="30dp"
+        android:text="Log In"
+        android:textSize="30sp"
+        android:layout_centerHorizontal="true"/>
+
 
 </RelativeLayout>

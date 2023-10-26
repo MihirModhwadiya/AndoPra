@@ -34,7 +34,6 @@ public class Practical_8 extends AppCompatActivity {
         txt_checkbox1 = findViewById(R.id.txt_checkbox1);
         txt_checkbox2 = findViewById(R.id.txt_checkbox2);
         txt_checkbox3 = findViewById(R.id.txt_checkbox3);
-
     }
 
     public void Check(View view) {
@@ -47,17 +46,19 @@ public class Practical_8 extends AppCompatActivity {
 
         if (ck1.isChecked()) {
             txt_checkbox1.setText(ck1.getText().toString());
-        }else{
+        } else {
             txt_checkbox1.setText("");
         }
+
         if (ck2.isChecked()) {
             txt_checkbox2.setText(ck2.getText().toString());
-        }else{
+        } else {
             txt_checkbox2.setText("");
         }
+
         if (ck3.isChecked()) {
             txt_checkbox3.setText(ck3.getText().toString());
-        }else{
+        } else {
             txt_checkbox3.setText("");
         }
     }

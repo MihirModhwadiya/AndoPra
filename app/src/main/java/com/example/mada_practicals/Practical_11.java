@@ -20,22 +20,12 @@ public class Practical_11 extends AppCompatActivity implements AdapterView.OnIte
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_practical11);
 
-//        flag[0] = findViewById(R.drawable.india);
-
         lstv = findViewById(R.id.main_lst);
         spinner = findViewById(R.id.spinner);
 
-//        ArrayAdapter<String> ad = new ArrayAdapter<>(this, R.layout.activity_item, R.id.title, lst);
+        ArrayAdapter<String> ad = new ArrayAdapter<>(this, R.layout.activity_item, R.id.title, lst);
 
-        Custom_adapter ad = new Custom_adapter(lst, flag, this);
-
-//        ArrayAdapter<String> ad = new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, lst);
-//        ad.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-
-        spinner.setAdapter(ad);
-        spinner.setOnItemSelectedListener(this);
-
-//        lstv.setAdapter(ad);
+        lstv.setAdapter(ad);
 
         lstv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
