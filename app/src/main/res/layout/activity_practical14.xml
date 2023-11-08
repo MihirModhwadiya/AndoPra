@@ -4,29 +4,21 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Practical_7">
+    tools:context=".Practical_14">
 
     <Button
         android:layout_centerInParent="true"
-        android:id="@+id/one_btn"
+        android:id="@+id/btnAlertDialog"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="First Button"/>
+        android:text="Show AlertDialogs"/>
 
     <Button
         android:layout_centerHorizontal="true"
-        android:layout_below="@+id/one_btn"
-        android:id="@+id/two_btn"
+        android:layout_below="@+id/btnAlertDialog"
+        android:id="@+id/btnCustomDialog"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Second Button"
-        android:onClick="clickk"/>
+        android:text="Show Custom Dialog"/>
 
-    <Button
-        android:layout_centerHorizontal="true"
-        android:layout_below="@+id/two_btn"
-        android:id="@+id/three_btn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Thired Button"/>
 </RelativeLayout>
