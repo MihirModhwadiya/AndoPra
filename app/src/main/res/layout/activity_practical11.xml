@@ -7,14 +7,9 @@
     tools:context=".Practical_11">
 
     <ListView
-        android:visibility="gone"
+        android:layout_marginTop="100dp"
         android:id="@+id/main_lst"
         android:layout_width="match_parent"
         android:layout_height="match_parent"/>
-
-    <Spinner
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:id="@+id/spinner"/>
 
 </RelativeLayout>

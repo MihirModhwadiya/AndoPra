@@ -13,15 +13,12 @@ import android.widget.Toast;
 public class Practical_11 extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
     ListView lstv;
     String[] lst = {"india", "USA", "UK"};
-    Spinner spinner;
-    int[] flag = {R.drawable.india, R.drawable.usa, R.drawable.uk};
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_practical11);
 
         lstv = findViewById(R.id.main_lst);
-        spinner = findViewById(R.id.spinner);
 
         ArrayAdapter<String> ad = new ArrayAdapter<>(this, R.layout.activity_item, R.id.title, lst);
 

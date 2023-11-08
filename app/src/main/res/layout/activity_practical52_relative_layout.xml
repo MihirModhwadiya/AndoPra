@@ -7,10 +7,51 @@
     tools:context=".Practical_5_2_RelativeLayout">
 
     <TextView
+        android:id="@+id/usernameLabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="RelativeLayout"
-        android:layout_centerInParent="true"
-        android:textSize="30sp"/>
+        android:text="Username:"
+        android:textSize="30sp"
+        android:layout_marginTop="30dp" />
+
+    <EditText
+        android:id="@+id/username"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/usernameLabel"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="-48dp"
+        android:layout_marginEnd="8dp"
+        android:layout_toEndOf="@id/usernameLabel" />
+
+    <TextView
+        android:id="@+id/passwordLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Password:"
+        android:textSize="30sp"
+        android:layout_below="@id/username"
+        android:layout_marginTop="30dp" />
+
+    <EditText
+        android:id="@+id/password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/passwordLabel"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="-46dp"
+        android:layout_marginEnd="8dp"
+        android:layout_toEndOf="@id/passwordLabel"
+        android:inputType="textPassword" />
+
+    <Button
+        android:id="@+id/sum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Log In"
+        android:textSize="30sp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/password"
+        android:layout_marginTop="30dp" />
 
 </RelativeLayout>

@@ -7,6 +7,7 @@
     tools:context=".Practical_11_i">
 
     <ListView
+        android:layout_marginTop="100dp"
         android:id="@+id/main_lst"
         android:layout_width="match_parent"
         android:layout_height="match_parent"/>

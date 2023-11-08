@@ -4,13 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Practical_14">
+    tools:context=".Practical_14_i">
 
     <Button
-        android:layout_centerInParent="true"
-        android:id="@+id/btnAlertDialog"
+        android:layout_marginTop="100dp"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/btnCustomDialog"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Show AlertDialogs"/>
+        android:text="Show Custom Dialog"/>
 
 </RelativeLayout>

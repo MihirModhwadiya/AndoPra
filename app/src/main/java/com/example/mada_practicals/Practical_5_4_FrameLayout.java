@@ -2,7 +2,9 @@ package com.example.mada_practicals;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.widget.TextView;
 
 public class Practical_5_4_FrameLayout extends AppCompatActivity {
 

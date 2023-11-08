@@ -18,14 +18,14 @@ public class Practical_7 extends AppCompatActivity {
         one_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(Practical_7.this, "One Button clicked", Toast.LENGTH_SHORT).show();
+                Toast.makeText(Practical_7.this, "Mihir One Button clicked", Toast.LENGTH_SHORT).show();
             }
         });
 
         View.OnClickListener clk = new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(Practical_7.this, "thired button clicked", Toast.LENGTH_SHORT).show();
+                Toast.makeText(Practical_7.this, "Mihir thired button clicked", Toast.LENGTH_SHORT).show();
             }
         };
 
@@ -33,6 +33,6 @@ public class Practical_7 extends AppCompatActivity {
         three_button.setOnClickListener(clk);
     }
     public void clickk(View view){
-        Toast.makeText(this, "Second Button clicked", Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, "Mihir Second Button clicked", Toast.LENGTH_SHORT).show();
     }
 }

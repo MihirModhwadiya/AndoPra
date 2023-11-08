@@ -11,7 +11,7 @@
         android:layout_height="wrap_content"
         android:id="@+id/username"
         android:layout_marginTop="30dp"
-        android:text="username"
+        android:text="Mihir"
         android:layout_centerHorizontal="true"
         android:textSize="30sp"/>
 
@@ -20,7 +20,7 @@
         android:layout_height="wrap_content"
         android:id="@+id/password"
         android:layout_marginTop="30dp"
-        android:text="password"
+        android:text="Mihir"
         android:layout_centerHorizontal="true"
         android:textSize="30sp"
         android:layout_below="@+id/username"/>
