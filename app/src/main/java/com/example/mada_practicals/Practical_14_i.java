@@ -16,7 +16,6 @@ public class Practical_14_i extends AppCompatActivity {
         Button btnCustomDialog = findViewById(R.id.btnCustomDialog);
 
         btnCustomDialog.setOnClickListener(v -> showCustomDialog());
-
     }
 
     private void showCustomDialog() {

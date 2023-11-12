@@ -44,7 +44,7 @@ public class Practical_10 extends AppCompatActivity {
                 }
 
                 if (!username.getText().toString().isEmpty() && !password.getText().toString().isEmpty()) {
-                    Intent intent = new Intent(Practical_10.this, Practical_5_1_LinearLayout.class);
+                    Intent intent = new Intent(Practical_10.this, activity_practical_5_1_2.class);
                     intent.putExtra("username", username.getText().toString());
                     intent.putExtra("password", password.getText().toString());
                     startActivity(intent);
