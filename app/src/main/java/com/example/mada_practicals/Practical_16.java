@@ -23,10 +23,8 @@ public class Practical_16 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_practical16);
 
-        // Initialize data
         initData();
 
-        // Initialize RecyclerView
         recyclerView = findViewById(R.id.recyclerView);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         movieAdapter = new Practical_16_i(movieList);

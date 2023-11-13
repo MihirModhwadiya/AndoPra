@@ -27,9 +27,7 @@ public class activity_practical_5_1_2 extends AppCompatActivity {
         Intent intent = getIntent();
         user = intent.getStringExtra("username");
         password = intent.getStringExtra("password");
-
         username.setText(user);
         pass.setText(password);
-
     }
 }

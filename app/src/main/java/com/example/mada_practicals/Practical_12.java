@@ -72,7 +72,11 @@ public class Practical_12 extends AppCompatActivity {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults);
         if (requestCode == WIFI_PERMISSION_REQUEST_CODE) {
             if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
-                wifiManager.setWifiEnabled(!wifiManager.isWifiEnabled());
+                if(wifiManager.isWifiEnabled()){
+                    wifiManager.setWifiEnabled(false);
+                }else{
+                    wifiManager.setWifiEnabled(true);
+                }
             }
         } else if (requestCode == BLUETOOTH_PERMISSION_REQUEST_CODE) {
             if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
