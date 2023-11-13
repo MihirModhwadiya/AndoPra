@@ -14,6 +14,7 @@ import android.widget.TextView;
 public class activity_practical_5_1_2 extends AppCompatActivity {
 
     TextView username, pass;
+    String user, password;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,7 +24,12 @@ public class activity_practical_5_1_2 extends AppCompatActivity {
         username = findViewById(R.id.username);
         pass = findViewById(R.id.pass);
 
-        Intent intent = new Intent();
+        Intent intent = getIntent();
+        user = intent.getStringExtra("username");
+        password = intent.getStringExtra("password");
+
+        username.setText(user);
+        pass.setText(password);
 
     }
 }

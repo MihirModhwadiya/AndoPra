@@ -8,16 +8,20 @@
     tools:context=".activity_practical_5_1_2">
 
     <TextView
-        android:layout_centerInParent="true"
         android:id="@+id/username"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
-    
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="hi"
+        android:textSize="30sp" />
+
     <TextView
-        android:layout_centerHorizontal="true"
-        android:layout_below="@+id/username"
         android:id="@+id/pass"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/username"
+        android:layout_centerHorizontal="true"
+        android:text="hello"
+        android:textSize="30sp" />
 
 </RelativeLayout>

@@ -15,8 +15,6 @@ public class Practical_10 extends AppCompatActivity {
     EditText username, password;
     Button submit;
     CheckBox remember;
-    int count;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -33,16 +31,16 @@ public class Practical_10 extends AppCompatActivity {
         submit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                EditText username = findViewById(R.id.edit_username), password = findViewById(R.id.edit_password);
-                CheckBox checked = findViewById(R.id.remember);
+//                EditText username = findViewById(R.id.edit_username);
+//                EditText password = findViewById(R.id.edit_password);
+//                CheckBox checked = findViewById(R.id.remember);
 
                 SharedPreferences sp = getSharedPreferences("LogIn", MODE_PRIVATE);
 
-                if (checked.isChecked()) {
+                if (remember.isChecked()) {
                     sp.edit().putString("username", username.getText().toString()).apply();
                     sp.edit().putString("password", password.getText().toString()).apply();
                 }
-
                 if (!username.getText().toString().isEmpty() && !password.getText().toString().isEmpty()) {
                     Intent intent = new Intent(Practical_10.this, activity_practical_5_1_2.class);
                     intent.putExtra("username", username.getText().toString());
